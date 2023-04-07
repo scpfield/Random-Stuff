@@ -1,6 +1,9 @@
 '''
 Fun With Python List Comprehension
 
+TO QUICKLY SEE THE EXAMPLES, SKIP THE LONG DESCRIPTION AND SCROLL DOWN.
+
+
 Background:
 
 For some reason, in the past I haven't always been the biggest fan of list comprehension in python, and 
