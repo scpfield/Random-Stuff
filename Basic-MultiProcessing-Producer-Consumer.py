@@ -160,18 +160,18 @@ def main():
         #
         with mpm.SyncManager() as QueueManager:
         
-            # This just creates a Queue to be managed.
+            # This creates a Queue to be managed.
             # It is actually a "Proxy" object.
             # At this point, the Server that will hold
             # the concrete Queue is already running.
             #
-            QueueManager.Queue  = mp.Queue()
+            QueueProxy = QueueManager.Queue()
             
             # Here we create the Producer + Consumer
             # Processes and give them the proxy object.
             #
-            Producer = ProducerProcess( QueueProxy = QueueManager.Queue )
-            Consumer = ConsumerProcess( QueueProxy = QueueManager.Queue )
+            Producer = ProducerProcess( QueueProxy = QueueProxy )
+            Consumer = ConsumerProcess( QueueProxy = QueueProxy )
             
             # Start 'em up.
             #
@@ -212,4 +212,3 @@ if __name__ == '__main__':
 #  If you are still reading, so far in my performance
 #  tests, I am getting suprisingly very good results.
 #  
-
