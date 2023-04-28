@@ -68,7 +68,6 @@ class ProducerProcess( mp.Process ):
 #
 class ConsumerProcess( mp.Process ):
 
-
     # Constructor
     #
     def __init__( self, Name = "Consumer", Daemon = True, 
