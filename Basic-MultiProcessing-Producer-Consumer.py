@@ -46,7 +46,7 @@ class ProducerProcess( mp.Process ):
     #  the start of the process execution
     #
     #  It simply adds an incrementing number
-    #  to a proxy-queue object
+    #  to a proxy-queue object in an infinite loop
     #
     def run( self ):
         
@@ -86,7 +86,9 @@ class ConsumerProcess( mp.Process ):
     
 
     # Similar to a thread run() function,
-    # this is the start of the process execution.
+    # this is the start of the process execution,
+    # infinite loop of receiving one message at 
+    # a time from the shared queue.
     #
     # Also this function checks to make sure that
     # each number value that it retrieves from the
