@@ -31,13 +31,13 @@ class ProducerProcess( mp.Process ):
                     Name        = "Producer", 
                     Daemon      = True, 
                     QueueProxy  = None, 
-                    *args, 
+                     *args, 
                     **kwargs ):
                   
         super().__init__(   name    = Name, 
                             daemon  = Daemon, 
-                            *args, 
-                            **kwargs)
+                             *args, 
+                            **kwargs )
                           
         self.QueueProxy = QueueProxy
     
@@ -70,11 +70,17 @@ class ConsumerProcess( mp.Process ):
 
     # Constructor
     #
-    def __init__( self, Name = "Consumer", Daemon = True, 
-                  QueueProxy = None, *args, **kwargs ):
+    def __init__(   self, 
+                    Name        = "Consumer", 
+                    Daemon      = True, 
+                    QueueProxy  = None, 
+                     *args, 
+                    **kwargs ):
                   
-        super().__init__( name = Name, daemon = Daemon, 
-                          *args, **kwargs)
+        super().__init__(   name    = Name, 
+                            daemon  = Daemon, 
+                             *args, 
+                            **kwargs )
                           
         self.QueueProxy = QueueProxy
     
