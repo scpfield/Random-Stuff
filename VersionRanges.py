@@ -2,7 +2,9 @@ import sys
 
 
 '''
-    The HackerRank test specified the input data should be 
+    This is an implementation of a HackerRank test that I 
+    did, which wanted a function to generate version numbers
+    between a start + end value.  The input data should be 
     a list of strings describing the start + end ranges of
     two version numbers, each having with 3 components, 
     in the following format:
