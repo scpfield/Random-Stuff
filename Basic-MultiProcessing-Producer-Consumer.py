@@ -87,8 +87,7 @@ class ConsumerProcess( mp.Process ):
 
     # Similar to a thread run() function,
     # this is the start of the process execution,
-    # infinite loop of receiving one message at 
-    # a time from the shared queue.
+    # infinite loop of receiving messages.
     #
     # Also this function checks to make sure that
     # each number value that it retrieves from the
